@@ -1,2 +1,0 @@
-ivaskevytch.github.io
-=====================
