@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Basic Page Needs -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Grid</title>
+    <meta name="description" content="A simple guide to responsive design.">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/grid.css">
+    <!--[if lt IE 9]>
+      <script src="/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Google Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+  </head>
+
+  <body>
+    <header class="clearfix">
+      <div class="container">
+        <div class="intro">
+          <a href="#"><h1>grid</h1></a>
+          <p>Просте керівництво до адаптивного дизайну.<br>Автор <a href="http://www.adamkaplan.me/" target="_blank">Adam Kaplan</a>.</p>
+        </div>
+        <img src="../images/mobile.png" alt="Intro" class="mobile animated fadeInUp">
+      </div>
+    </header>
+
+    <section>
+      <div class="container">
+        <img src="../images/mobile-first.png" alt="Mobile First" class="rwd">
+        <h1>Навіщо перейматися адаптивністю?</h1>
+        <p>Ми хочемо, щоб наші сайти були пристосованими до всіх пристроїв, відповідаючи поведінці користувача, розмірам та орієнтації екрану.</p>
+      </div>
+    </section>
+
+    <section class="example fragmentation">
+      <div class="container"></div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h1>Фрагментований світ</h1>
+        <p><a href="http://opensignal.com/reports/fragmentation-2013/" target="_blank">Станом на 2013 рік</a>, є тисячі різних пристроїв та розмірів екрану, котрі мають доступ до інтернету, так що неможливо проектувати макети, охоплюючи їх всіх. Замість цього, ми повинні прийняти більш гнучкий підхід до проектування.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h1>Спершу Мобільний</h1>
+        <p>Термін "mobile first" часто зустрічається останнім часом. Насправді, це означає, що потрібно починати з стилів та макетів для мобільних, а роботу над стилями для більших екранів виконувати тільки якщо це необхідно. Іншими словами, мобільні стилі мають бути по замовчуванню і вам більше не доведеться перевизначити їх пізніше. Так набагато простіше!</p>
+        <hr>
+        <blockquote>
+          <p>Припускаючи гнучкий, але простий макет по замовчуванню, ви можете краще захиститися від браузерів з різними розмірами (viewports), котрі не зовсім здатні реагувати на повну адаптивність макету. Тому, коли ми говоримо про макет, "mobile first" насправді означає "прогресивне покращення."</p>
+          <cite>—Ethan Marcotte</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="example quote remove-padding">
+      <div class="container">
+        <img src="../images/small-large.png" alt="Mobile First">
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h1>Медіа запити min-width (мінімальної ширини)</h1>
+        <p>Уявіть конкретні правила макету, коли в них є потреба. Використовуйте <code>min-width</code> в залежності від ширини viewport. Це простіше, щоб всі медіа-запити були поряд, а не в кінці таблиці стилів або в окремому документі.</p>
+        <hr>
+        <script src="https://gist.github.com/aekaplan/8969695.js"></script>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="circle">1</div>
+        <h1>Не Всі Браузери створені Одинаково</h1>
+        <p>Браузери будуть обробляти CSS по різному. Щоб запобігти цьому, хорошою ідеєю є використання сучасної альтернативи для скидання <a href="http://necolas.github.io/normalize.css/" target="_blank">Normalize.css</a>, котрий буде обробляти елементи більш послідовно бля всіх браузерів. Не забувайте добавляти його перед вашими стилями.</p>
+        <hr>
+        <script src="https://gist.github.com/aekaplan/8969436.js"></script>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="circle">2</div>
+        <h1>Добавте Viewport мета тег</h1>
+        <p>Вставте в <code>&lt;head&gt;</code> вашої HTML сторінки. Це дозволить використовувати медіа запити для макетів різних пристроїв.</p>
+        <hr>
+        <script src="https://gist.github.com/aekaplan/8243831.js"></script>
+      </div>
+    </section>
+
+    <section class="example">
+      <div class="container">
+        <img src="../images/box-model.png" alt="Box Model">
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h1>CSS Box Model</h1>
+        <p>Важливо зрозуміти основи того, як елементи генеруються і поводяться в браузері, перш ніж поринати в адаптивний веб-дизайн. CSS Box Model складається з чотирьох окремих частин.</p>
+        <hr>
+
+        <div class="row clearfix">
+          <div class="column fourth">
+            <img src="../images/content.png" alt="content">
+            <h3 class="content">Content</h3>
+            <p>The content of the box, where text and images appear.</p>
+          </div>
+
+          <div class="column fourth">
+            <img src="../images/padding.png" alt="padding">
+            <h3 class="padding">Padding</h3>
+            <p>Clears an area around the content.</p>
+          </div>
+
+          <div class="column fourth">
+            <img src="../images/border.png" alt="border">
+            <h3 class="border">Border</h3>
+            <p>A border that goes around the padding.</p>
+          </div>
+
+          <div class="column fourth">
+            <img src="../images/margin.png" alt="margin">
+            <h3 class="margin">Margin</h3>
+            <p>Clears an area around the border.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="circle">3</div>
+        <h1>Використовуйте box-sizing: border-box</h1>
+        <p>Розмістіть на початку <code>CSS</code> файлу. <code>*</code> охопить всі елементи на сторінці.</p>
+        <hr>
+        <script src="https://gist.github.com/aekaplan/8247563.js"></script>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h1>Ваш Вибір</h1>
+        <p><a href="http://en.wikipedia.org/wiki/Internet_Explorer_box_model_bug" target="_blank">Те, що колись було багом</a> зараз властивість CSS котра часто використовується. В основному це означає, що ви можете вибрати, чи слід вносити borders та padding до ширини вашого контенту.</p>
+        <hr>
+
+        <div class="row clearfix">
+          <div class="column half">
+            <img src="../images/without-box-model.png" alt="Without Box Model">
+            <h3>Без використання box-sizing: border-box</h3>
+            <p>Margin, borders and padding are drawn outside the set width of your content.</p>
+          </div>
+
+          <div class="column half">
+            <img src="../images/with-box-model.png" alt="With Box Model">
+            <h3>З використанням box-sizing: border-box</h3>
+            <p>Borders and padding are drawn inside the set width of your content. The margin is drawn outside.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="circle">4</div>
+        <h1>Створення Контейнеру</h1>
+        <p>Контейнер утримує елементи та контролює максимальну ширину сторінки. Використання контейнерів, зробить проектування для адаптивності простішим!</p>
+        <hr>
+        <script src="https://gist.github.com/aekaplan/8246124.js"></script>
+        <script src="https://gist.github.com/aekaplan/8246032.js"></script>
+      </div>
+    </section>
+
+    <section class="example">
+      <div class="container">
+        <img src="../images/container.png" alt="Container">
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="circle">5</div>
+        <h1>Створення Стовбців</h1>
+        <p>Мobile first, стовбці мають властивості <code>block</code>  (займають всю доступну ширину) по замовчуванню. Не потрібно додаткових стилів!</p>
+        <hr>
+        <script src="https://gist.github.com/aekaplan/8978649.js"></script>
+      </div>
+    </section>
+
+    <section class="example grid mobile-first">
+      <div class="container">
+        <div class="column">
+          <span>.column</span>
+        </div>
+
+        <div class="column">
+          <span>.column</span>
+        </div>
+
+        <div class="column">
+          <span>.column</span>
+        </div>
+
+        <div class="column">
+          <span>.column</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="circle">6</div>
+        <h1>Створення розміру стовбців</h1>
+        <p>На великих екранах, стовбцям надається <code>float: left</code> для упорядкування контенту по горизонталі. Стовбці зараз не використовують відступи (paddings), тому вам більше не потрібно турбуватися про видалення країв(margins).</p>
+        <hr>
+      </div>
+
+      <div class="container gutters">
+        <div class="row clearfix">
+          <div class="column half">
+            <span>.column .half</span>
+          </div>
+
+          <div class="column half">
+            <span>.column .half</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <script src="https://gist.github.com/aekaplan/9040799.js"></script>
+        <script src="https://gist.github.com/aekaplan/8978515.js"></script>
+      </div>
+    </section>
+
+    <section class="example grid">
+      <div class="container">
+        <div class="row clearfix">
+          <div class="column full">
+            <span>.column .full</span>
+          </div>
+        </div>
+
+        <div class="row clearfix">
+          <div class="column two-thirds">
+            <span>.column .two-thirds</span>
+          </div>
+
+          <div class="column third">
+            <span>.column .third</span>
+          </div>
+        </div>
+
+        <div class="row clearfix">
+          <div class="column half">
+            <span>.column .half</span>
+          </div>
+
+          <div class="column half">
+            <span>.column .half</span>
+          </div>
+        </div>
+
+        <div class="row clearfix">
+          <div class="column third">
+            <span>.column .third</span>
+          </div>
+
+          <div class="column third">
+            <span>.column .third</span>
+          </div>
+
+          <div class="column third">
+            <span>.column .third</span>
+          </div>
+        </div>
+
+        <div class="row clearfix">
+          <div class="column fourth">
+            <span>.column .fourth</span>
+          </div>
+
+          <div class="column fourth">
+            <span>.column .fourth</span>
+          </div>
+
+          <div class="column fourth">
+            <span>.column .fourth</span>
+          </div>
+
+          <div class="column fourth">
+            <span>.column .fourth</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="circle">7</div>
+        <h1>Створення Рядів</h1>
+        <p>Стовбці загорнуті в ряди, щоб запобігти зліпленню сусідніх елементі. Ряди очищують за допомогою популярного <code>clearfix</code>, автор котрого
+        <a href="http://nicolasgallagher.com/micro-clearfix-hack/" target="_blank">Nicolas Gallagher</a>.</p>
+        <hr>
+        <script src="https://gist.github.com/aekaplan/8430571.js"></script>
+        <script src="https://gist.github.com/aekaplan/8467436.js"></script>
+      </div>
+    </section>
+
+    <section class="example grid row-example">
+      <div class="container">
+        <div class="row clearfix">
+          <div class="column half">
+            <span>.column .half</span>
+          </div>
+
+          <div class="column half">
+            <span>.column .half</span>
+          </div>
+        </div>
+
+        <div class="row clearfix">
+          <div class="column half">
+            <span>.column .half</span>
+          </div>
+
+          <div class="column half">
+            <span>.column .half</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h1>Зворотній потік (Flow Opposite)</h1>
+        <p>Додайте клас <code>.flow-opposite</code> до стовбця, котрий потрібно відобразити першим на мобільному, але який відображатиметься зправа на великих екранах.</p>
+        <hr>
+        <script src="https://gist.github.com/aekaplan/9025378.js"></script>
+        <script src="https://gist.github.com/aekaplan/9025387.js"></script>
+      </div>
+    </section>
+
+    <section class="example grid">
+      <div class="container">
+        <div class="row clearfix">
+          <div class="column half flow-opposite">
+            <span>.column .half .flow-opposite</span>
+          </div>
+
+          <div class="column half">
+            <span>.column .half</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h1>Практика веде до досконалості</h1>
+        <p>Дотримуючись цих простих кроків, ви стаєте на шлях до майстерності в адаптивному веб-дизайні. Продовжуйте практикувати і допоможіть зробити інтернет кращим, 
+         більш корисним місцем.</p>
+        <hr>
+        <p><a href="https://github.com/aekaplan/grid" target="_blank" class="button">Переглянути Код</a></p>
+      </div>
+    </section>
+
+    <section class="resources">
+      <div class="container">
+        <div class="row clearfix">
+          <div class="column half">
+            <h3>Further Reading</h3>
+            <hr class="small">
+            <ul>
+              <li><a href="http://www.abookapart.com/products/mobile-first" target="_blank">A Book Apart: Mobile First</a></li>
+              <li><a href="http://www.abookapart.com/products/responsive-web-design" target="_blank">A Book Apart: Responsive Web Design</a></li>
+              <li><a href="http://blog.teamtreehouse.com/beginners-guide-to-responsive-web-design" target="_blank">Beginner’s Guide to Responsive Web Design</a></li>
+              <li><a href="http://www.paulirish.com/2012/box-sizing-border-box-ftw" target="_blank">Box-sizing: Border-box FTW</a></li>
+              <li><a href="http://dev.tutsplus.com/articles/quick-tip-dont-forget-the-viewport-meta-tag--webdesign-5972" target="_blank">Don’t Forget the Viewport Meta Tag</a></li>
+              <li><a href="http://bradfrostweb.com/blog/mobile/the-many-faces-of-mobile-first/" target="_blank">The Many Faces of ‘Mobile First’</a></li>
+              <li><a href="http://fuseinteractive.ca/blog/understanding-humble-clearfix" target="_blank">Understanding the Humble Clearfix</a></li>
+            </ul>
+          </div>
+
+          <div class="column half">
+            <h3>References</h3>
+            <hr class="small">
+            <ul>
+              <li><a href="http://opensignal.com/reports/fragmentation-2013/" target="_blank">Android Fragmentation Visualized</a></li>
+              <li><a href="http://daneden.github.io/animate.css/" target="_blank">Animate.css</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box_model" target="_blank">Box Model</a></li>
+              <li><a href="https://developers.google.com/chrome-developer-tools/" target="_blank">Chrome Developer Tools</a></li>
+              <li><a href="https://gist.github.com/aekaplan" target="_blank">Code samples by GitHub Gist</a></li>
+              <li><a href="http://en.wikipedia.org/wiki/Internet_Explorer_box_model_bug" target="_blank">Internet Explorer Box Model</a></li>
+              <li><a href="http://coding.smashingmagazine.com/2009/04/22/progressive-enhancement-what-it-is-and-how-to-use-it/" target="_blank">Progressive Enhancement</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
