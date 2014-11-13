@@ -113,7 +113,9 @@ header a:hover { text-decoration: none; }
 
 /* Section
    ========================================================================== */
-
+.side {
+   color:#777;
+}
 section {
   border-top: 1px solid #eee;
   text-align: center;
