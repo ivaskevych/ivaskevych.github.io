@@ -1,0 +1,29 @@
+html {
+   font-family: GillSans, Calibri, Trebuchet, sans-serif;
+}
+body {
+	overflow-y: scroll;
+}
+
+.indicator {
+	background-color: #c2c2c2 !important;
+}
+
+ul.tabs li.tab {
+	line-height: inherit;
+}
+
+.row.pinned {
+position: fixed;
+width: 100%;
+top: 0;
+z-index: 10;
+}
+
+.content {
+	padding-top: 68px;
+}
+
+.card-image {
+	height: 200px;
+}
