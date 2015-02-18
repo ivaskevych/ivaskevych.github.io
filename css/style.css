@@ -99,8 +99,8 @@ Main Components
   padding-top: 76px;
 }
 .cd-main-content.is-fixed .cd-filter {
-  position: fixed;
-  height: 100vh;
+  /*position: fixed;*/
+  /*height: 100vh;*/
   overflow: hidden;
 }
 .cd-main-content.is-fixed .cd-filter form {
