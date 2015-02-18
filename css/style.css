@@ -35,12 +35,12 @@ a {
 Main Components 
 
 -------------------------------- */
-.header {
+.cd-header {
   position: relative;
   height: 150px;
   background-color: #331d35;
 }
-.header h1 {
+.cd-header h1 {
   color: #ffffff;
   line-height: 150px;
   text-align: center;
@@ -48,76 +48,76 @@ Main Components
   font-weight: 300;
 }
 @media only screen and (min-width: 1170px) {
-  .header {
+  .cd-header {
     height: 180px;
   }
-  .header h1 {
+  .cd-header h1 {
     line-height: 180px;
   }
 }
 
-.footer {
+.cd-footer {
   position: relative;
   height: 150px;
   background-color: #331d35;
 }
-.footer h1 {
+.cd-footer h1 {
   color: #ffffff;
   line-height: 150px;
   text-align: center;
   font-size: 2.4rem;
   font-weight: 300;
 }
-.footer a {
+.cd-footer a {
   color: #623666;
 }
 @media only screen and (min-width: 1170px) {
-  .footer {
+  .cd-footer {
     height: 80px;
   }
-  .footer h1 {
+  .cd-footer h1 {
     line-height: 80px;
   }
 }
 
-.main-content {
+.cd-main-content {
   position: relative;
   min-height: 100vh;
 }
-.main-content:after {
+.cd-main-content:after {
   content: "";
   display: table;
   clear: both;
 }
-.main-content.is-fixed .tab-filter-wrapper {
+.cd-main-content.is-fixed .cd-tab-filter-wrapper {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
 }
-.main-content.is-fixed .gallery {
+.cd-main-content.is-fixed .cd-gallery {
   padding-top: 76px;
 }
-.main-content.is-fixed .filter {
+.cd-main-content.is-fixed .cd-filter {
   position: fixed;
   height: 100vh;
   overflow: hidden;
 }
-.main-content.is-fixed .filter form {
+.cd-main-content.is-fixed .cd-filter form {
   height: 100vh;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
-.main-content.is-fixed .filter-trigger {
+.cd-main-content.is-fixed .cd-filter-trigger {
   position: fixed;
 }
 @media only screen and (min-width: 768px) {
-  .main-content.is-fixed .gallery {
+  .cd-main-content.is-fixed .cd-gallery {
     padding-top: 90px;
   }
 }
 @media only screen and (min-width: 1170px) {
-  .main-content.is-fixed .gallery {
+  .cd-main-content.is-fixed .cd-gallery {
     padding-top: 100px;
   }
 }
@@ -127,18 +127,18 @@ Main Components
 xtab-filter 
 
 -------------------------------- */
-.tab-filter-wrapper {
+.cd-tab-filter-wrapper {
   background-color: #ffffff;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
   z-index: 1;
 }
-.tab-filter-wrapper:after {
+.cd-tab-filter-wrapper:after {
   content: "";
   display: table;
   clear: both;
 }
 
-.tab-filter {
+.cd-tab-filter {
   /* tabbed navigation style on mobile - dropdown */
   position: relative;
   height: 50px;
@@ -146,7 +146,7 @@ xtab-filter
   margin: 0 auto;
   z-index: 1;
 }
-.tab-filter::after {
+.cd-tab-filter::after {
   /* small arrow icon */
   content: '';
   position: absolute;
@@ -167,33 +167,33 @@ xtab-filter
   transition: all 0.3s;
   pointer-events: none;
 }
-.tab-filter ul {
+.cd-tab-filter ul {
   position: absolute;
   top: 0;
   left: 0;
   background-color: #ffffff;
   box-shadow: inset 0 -2px 0 #41307c;
 }
-.tab-filter li {
+.cd-tab-filter li {
   display: none;
 }
-.tab-filter li:first-child {
+.cd-tab-filter li:first-child {
   /* this way the placehodler is alway visible */
   display: block;
 }
-.tab-filter a {
+.cd-tab-filter a {
   display: block;
-  /* set same size of the .tab-filter */
+  /* set same size of the .cd-tab-filter */
   height: 50px;
   width: 140px;
   line-height: 50px;
   padding-left: 14px;
 }
-.tab-filter a.selected {
+.cd-tab-filter a.selected {
   background: #41307c;
   color: #ffffff;
 }
-.tab-filter.is-open::after {
+.cd-tab-filter.is-open::after {
   /* small arrow rotation */
   -webkit-transform: translateY(-50%) rotate(-180deg);
   -moz-transform: translateY(-50%) rotate(-180deg);
@@ -201,39 +201,39 @@ xtab-filter
   -o-transform: translateY(-50%) rotate(-180deg);
   transform: translateY(-50%) rotate(-180deg);
 }
-.tab-filter.is-open ul {
+.cd-tab-filter.is-open ul {
   box-shadow: inset 0 -2px 0 #41307c, 0 2px 10px rgba(0, 0, 0, 0.2);
 }
-.tab-filter.is-open ul li {
+.cd-tab-filter.is-open ul li {
   display: block;
 }
-.tab-filter.is-open .placeholder a {
+.cd-tab-filter.is-open .placeholder a {
   /* reduces the opacity of the placeholder on mobile when the menu is open */
   opacity: .4;
 }
 @media only screen and (min-width: 768px) {
-  .tab-filter {
+  .cd-tab-filter {
     /* tabbed navigation style on medium devices */
     width: auto;
     cursor: auto;
   }
-  .tab-filter::after {
+  .cd-tab-filter::after {
     /* hide the arrow */
     display: none;
   }
-  .tab-filter ul {
+  .cd-tab-filter ul {
     background: transparent;
     position: static;
     box-shadow: none;
     text-align: center;
   }
-  .tab-filter li {
+  .cd-tab-filter li {
     display: inline-block;
   }
-  .tab-filter li.placeholder {
+  .cd-tab-filter li.placeholder {
     display: none !important;
   }
-  .tab-filter a {
+  .cd-tab-filter a {
     display: inline-block;
     padding: 0 1em;
     width: auto;
@@ -242,30 +242,30 @@ xtab-filter
     font-weight: 700;
     font-size: 1.3rem;
   }
-  .no-touch .tab-filter a:hover {
+  .no-touch .cd-tab-filter a:hover {
     color: #41307c;
   }
-  .tab-filter a.selected {
+  .cd-tab-filter a.selected {
     background: transparent;
     color: #41307c;
     /* create border bottom using box-shadow property */
     box-shadow: inset 0 -2px 0 #41307c;
   }
-  .tab-filter.is-open ul li {
+  .cd-tab-filter.is-open ul li {
     display: inline-block;
   }
 }
 @media only screen and (min-width: 1170px) {
-  .tab-filter {
+  .cd-tab-filter {
     /* tabbed navigation on big devices */
     width: 100%;
     float: right;
     margin: 0;
-    -webkit-transition: width 0.3s;
-    -moz-transition: width 0.3s;
-    transition: width 0.3s;
+    -webkit-transition: width 0.cd-3s;
+    -moz-transition: width 0.cd-3s;
+    transition: width 0.cd-3s;
   }
-  .tab-filter.filter-is-visible {
+  .cd-tab-filter.filter-is-visible {
     /* reduce width when filter is visible */
     width: 80%;
   }
@@ -276,22 +276,22 @@ xtab-filter
 xgallery 
 
 -------------------------------- */
-.gallery {
+.cd-gallery {
   padding: 26px 5%;
   width: 100%;
 }
-.gallery li {
+.cd-gallery li {
   margin-bottom: 1.6em;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
   display: none;
 }
-.gallery li.gap {
+.cd-gallery li.gap {
   /* used in combination with text-align: justify to align gallery elements */
   opacity: 0;
   height: 0;
   display: inline-block;
 }
-.gallery img {
+.cd-gallery img {
   display: block;
   width: 100%;
   
@@ -306,7 +306,7 @@ xgallery
   -o-transition: all .3s;
   transition: all .3s;
 }
-.gallery img:hover {
+.cd-gallery img:hover {
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
   -webkit-filter: grayscale(0);
   -moz-filter: grayscale(0);
@@ -314,39 +314,39 @@ xgallery
   -o-filter: grayscale(0);
   filter: grayscale(0);
 }
-.gallery .fail-message {
+.cd-gallery .cd-fail-message {
   display: none;
   text-align: center;
 }
 @media only screen and (min-width: 768px) {
-  .gallery {
+  .cd-gallery {
     padding: 40px 3%;
   }
-  .gallery ul {
+  .cd-gallery ul {
     text-align: justify;
   }
-  .gallery ul:after {
+  .cd-gallery ul:after {
     content: "";
     display: table;
     clear: both;
   }
-  .gallery li {
+  .cd-gallery li {
     width: 48%;
     margin-bottom: 2em;
   }
 }
 @media only screen and (min-width: 1170px) {
-  .gallery {
+  .cd-gallery {
     padding: 50px 2%;
     float: right;
     -webkit-transition: width 0.3s;
     -moz-transition: width 0.3s;
     transition: width 0.3s;
   }
-  .gallery li {
+  .cd-gallery li {
     width: 23%;
   }
-  .gallery.filter-is-visible {
+  .cd-gallery.filter-is-visible {
     /* reduce width when filter is visible */
     width: 80%;
   }
