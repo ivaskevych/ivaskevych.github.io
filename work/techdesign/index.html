@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <style>
+      @-webkit-keyframes flash-sign {
+        22%, 28%, 98%, 100% {
+          filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+          opacity: 0;
+        }
+      
+        27%, 99% {
+          filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+          opacity: 1;
+        }
+      }
+      
+      @keyframes flash-sign {
+        22%, 28%, 98%, 100% {
+          filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+          opacity: 0;
+        }
+      
+        27%, 99% {
+          filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+          opacity: 1;
+        }
+      }
+    </style>
+    <div class="wrapper">
+      <div class="container-fluid">
+        <div class="row">
+          <nav class="main-nav">
+            <div class="logo">
+              <h1>DMT</h1>
+              <h4>Design Meets Tech</h4>
+              <div class="menu"><a href="#0">Menu<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAtElEQVRoQ+2XQQrEIBAEMy9PLrvBoy/Owj6hpYIMlXu3WiU4qaPJV03OcXiQ3UxqRCMQgRr3PKHuV2trfOfz6orQYh4EAhvXNjLymVeMYaOgD+JGMv5b0YhGIAJeLQhsXKuRGB0UdIyHwMa1jYZGf6ziW4AEazjGI2DjUh/EGB0U1AgENq7VSIwOCmoEAhvXOsbH6KCgYzwENq5tZMQxPr4FSNAHEcG6UKqRBXhIVCMI1oXSH5p6LGQ1c05DAAAAAElFTkSuQmCC" width="25" height="25" class="icon"></a></div>
+              <div class="search"> <a href="#0">Search<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAADu0lEQVRoQ+2ZzVXbQBDH/7PkQW44FcSpIFABpoKYCgINRNYl/jpgDv7KRVYaiKkgSgVABbiDQAUxx5Cwk7cy5knyCmklOwg/fLR3Z+e387ljwpp8aE048AKiLOl0nNLvV2IPxFUQysQogWjHtzLzhAlTMK7A5G39lRd2x56uygMyWaTfdyqCyQKoaqYYe8R88rltT8z2Ja82Aun3nTJJOiaiw2TR8SuYecyCT5pN+yqPnODe1CDDnlMF0zcQlZZyOPMUxEf1lu0tQ14qkEHXtYgw0h7IuGbAYyG9DYnp3G2+dJ2dO4ESSVElQMXQW91+ZtQabcvNC5MIMux9rQHsaA66kCQ7zaZ9nkaJWVyJDoC9xfVk11uf9BeVRjjwePr13Qni+zIPjr8YeZDHzWItogJbSLoMxgQDN4JlJW/WUW4nSZwTsP1wScxTKXg3awKIBRn23DGAj6HMwHI3L8RcnoJhEpcRa5/WW1amjKgFuffns/Ah+f046qI6N6OMl6UFGXRdjwgfAgdf1FtWJWXcGS0b9lyVLB4SADN+NNqWYaHVBLtqO243xa+gNpLkftrsZEQBQGf9zVv5xrSdWbDIQqZiXNfbVtlUQZP1w657Fa4z5hlMAxIOcma4jbZVM1HMdO2g646IYAX2GQe9DiTks6t0q7niGvcyjslFkO5I1Y5ZK64qZsYsYmKVhVTMPKm3a7smMnQW4aCAestKbGNMDoxbO+y5uc5dX5BBz50Q8P5pXcs8U65xsEd6rKdIv1nOTCyIDL5qtGrvlhHQcTIGvdFPAgWK7hIK4tq0KOrWok0jg88brdr+Kqwy6I3OCBRsSI2rul/vdMqtTRuv4Fb9sNJdVtYWPtYi6gd/hsVC1ZTQc5TA+3lfiX5LAjqLPqO3bmXZtH1/qHeP+X3c8CHPCCd+tMRevVU7yBqHiX1U3NRDJQAmf1qYehxETMeRwA7prSaQjXbtKAtMIsgsXmJnW1B1hgCPIDzw3U1wQAfa2GbIKgPVcJ2IVzUrTCqQGYxTZYhxKGayXF2KPVlgUoPME8D9tDA0JkqhW3TJ6f0XsXJMYYxA5tr4AzaITmTSkobnVJIcz+NKl+KDQkxgMoHMD5u1M6gAQo1vygyU5k8ANZUkYMKMCUNOXv+Bp0uty4LJBZLGBGnWLAOmECBxnYSJmxUGJC9MoUDywBQOJCtMIUHSwEiWR822rf768D+FBUmAWXh8FRokBkb7giw8SAQm9hn8LED8Pq/rHAZjIlponw1IUofwApJ0Q//7939OXjBRogT3FwAAAABJRU5ErkJggg==" width="25" height="25" class="icon"></a></div>
+            </div>
+          </nav>
+        </div>
+        <div class="row">
+          <div class="full space">
+            <figure class="card"><img src="images/buster_bulb.png" alt="buster bulb" style="z-index: 1000"><img src="images/buster_bulb_light.png" alt="buster bulb light" style="z-index: 2000" class="flash">
+              <figcaption style="z-index: 3000">
+                <h4 class="category">Home</h4>
+                <h1 class="title">Buster<br>Bulb</h1>
+                <p class="description">
+                  The first designer<br>
+                  LED bulb, finished<br>
+                  in gold glass.
+                </p><a href="#0" class="button read-more">Read more</a>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="row">
+          <div class="eight space">
+            <figure class="card"><img src="images/peak.png" alt="peak">
+              <figcaption>
+                <h4 class="category">Accessories</h4>
+                <h1 class="title">Peak</h1>
+                <p class="description">
+                  A playful pouch<br>
+                  with a trick up its<br>
+                  sleeve
+                </p><a href="#0" class="button read-more">Read more</a>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="four subscribe space">
+            <figure class="card"><img src="images/peak.png" alt="peak">
+              <figcaption>
+                <p class="title">Good Things</p>
+                <p class="agitation">
+                  ...<br>
+                  come to those who sign up<br>
+                  for our newsletter.
+                </p>
+                <form action="#0" name="subscribe">
+                  <input type="email" name="email" placeholder="Your email">
+                  <input type="submit" value="Subscribe" name="subscribe">
+                </form>
+                <p class="privacy">We respect your privacy and we won’t<br>share your information.</p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="row">
+          <div class="tree space">
+            <figure class="card card-small"><img src="images/leica.png" alt="leica">
+              <figcaption>
+                <h4 class="category">Cameras</h4>
+                <h1 class="title">Leica M</h1><a href="#0" class="button review">Review</a>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="tree space">
+            <figure class="card card-small"><img src="images/trobla_amplifier.png" alt="trobla amplifier">
+              <figcaption>
+                <h4 class="category">Sound</h4>
+                <h1 class="title">Trobla<br>Amplifier</h1><a href="#0" class="button review">Review</a>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="six space">
+            <figure class="card card-middle"><img src="images/leica_dlux.png" alt="leica d-lux">
+              <figcaption>
+                <h4 class="category">Cameras</h4>
+                <h1 class="title">Leica D-Lux</h1>
+                <p class="description">Limited-edition Diesel<br>collaboration</p><a href="#0" class="button read-more">Read more</a>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="row">
+          <footer>
+            <div class="copyright">Copyright DMT</div>
+            <div class="social"><a href="#0"> <img src="images/fb.png" alt="facebook"></a><a href="#0"><img src="images/tw.png" alt="twitter"></a></div>
+          </footer>
+        </div>
+      </div>
+    </div>
+    
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
