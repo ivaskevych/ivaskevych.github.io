@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="desktop">
+    <div class="wrapper explorer">
+      <div class="header drag-point">
+        <div class="toolbar">
+          <div class="buttons">
+            <div class="square close"></div>
+          </div>
+          <div class="title">Browser</div>
+        </div>
+        <div class="tabs">
+          <div data-link="http://ustyna-hnes.github.io" class="tab active"><span class="tab-name">Ustyna Hnes Portfolio</span></div>
+          <div data-link="http://ivaskevych.github.io/work/carpathian/" class="tab"><span class="tab-name">Carpathian</span></div>
+          <div data-link="http://ivaskevych.github.io/grid/" class="tab"><span class="tab-name">Grid</span></div>
+          <div data-link="http://ivaskevych.github.io/work/techdesign/" class="tab"><span class="tab-name">Tech design</span></div>
+        </div>
+      </div>
+      <div class="window">
+        <iframe src="http://ustyna-hnes.github.io" frameborder="0" data-src="http://ustyna-hnes.github.io" class="current-window"></iframe>
+        <iframe src="" frameborder="0" data-src="http://ivaskevych.github.io/work/carpathian/"></iframe>
+        <iframe src="" frameborder="0" data-src="http://ivaskevych.github.io/grid/"></iframe>
+        <iframe src="" frameborder="0" data-src="http://ivaskevych.github.io/work/techdesign/"></iframe>
+      </div>
+    </div>
+    <div class="wrapper terminal">
+      <div class="header drag-point">
+        <div class="toolbar">
+          <div class="buttons">
+            <div class="square close"></div>
+          </div>
+          <div class="title">cmd</div>
+        </div>
+      </div>
+      <div class="console">
+        <div class="console-text">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            
+            
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="scripts/vendor.js"></script>
+    <script src="scripts/main.js"></script>
+    <script>
+      $( ".square" ).click(function() {
+          $( ".explorer" ).toggle( "fast" );
+      });
+    </script>
+  </div>
+</body>
